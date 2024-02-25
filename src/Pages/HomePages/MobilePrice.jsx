@@ -12,8 +12,8 @@ const MobilePrice = () => {
                     <div>
                         <div className="container p-2 mx-auto rounded-md sm:p-4 dark:text-gray-100 ">
                             <h2 className="my-10  text-2xl font-semibold leading-tight">Mobile Price list in BD 2023</h2>
-                            <div className="overflow-x-auto px-20 mb-10">
-                                <table className="min-w-full text-xs">
+                            <div className="overflow-x-auto  mb-10">
+                                <table className=" text-xs">
                                     <thead className="rounded-t-lg bg-gradient-to-tr to-purple-300 from-cyan-300 ">
                                         <tr className="text-right">
                                             <th title="Ranking" className="p-3 text-left">#</th>

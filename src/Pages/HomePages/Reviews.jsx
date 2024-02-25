@@ -2,7 +2,7 @@ import React from 'react';
 
 const Reviews = () => {
     return (
-        <div className='bg-gradient-to-tr to-purple-200 from-cyan-200 px-4'>
+        <div className='bg-gradient-to-tr to-purple-200 from-cyan-200 '>
             <h1 className="text-3xl pt-12 mb-5 font-bold text-center  ">Mobile Reviews</h1>
             <div className="bg-gradient-to-tr to-purple-200 from-cyan-200 w-5/6 mx-auto rounded-lg shadow-2xl py-16 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 
@@ -15,13 +15,13 @@ const Reviews = () => {
                                 alt="Person"
                             />
                         </div>
-                        <div className="flex flex-col justify-center mt-5 sm:mt-0 sm:p-5 sm:col-span-2">
+                        <div className="flex flex-col justify-center mt-5  sm:mt-0 sm:p-5 sm:col-span-2">
                             <p className="text-lg font-bold">Oppo A17 Review</p>
                             <p className="mb-4 text-xs text-gray-800">Product Manager</p>
-                            <p className="mb-4 text-sm tracking-wide text-gray-800">
+                            <p className="mb-4 text-sm tracking-wide px-4 text-gray-800">
                                 Oppo A17 is a budget smartphone that offers a decent set of features for its price point. The device features a 6.44 inches HD+ display with a resolution of 720 x 1600 pixels. It is powered by a MediaTek Helio P35 processor, paired with 4GB of RAM and 64GB of internal storage, which can be expanded via a microSD card.Oppo A17 has a quad-camera setup on the back, consisting of a 13-megapixel...
                             </p>
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center space-x-3 pl-4 pb-4">
                                 <a
                                     href="/"
                                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -52,10 +52,10 @@ const Reviews = () => {
                         <div className="flex flex-col justify-center mt-5 sm:mt-0 sm:p-5 sm:col-span-2">
                             <p className="text-lg font-bold">Samsung Galaxy Note 20 Ultra 5G Review</p>
 
-                            <p className="mb-4 text-sm tracking-wide text-gray-800">
+                            <p className="mb-4 text-sm tracking-wide px-4 text-gray-800">
                                 The Samsung Galaxy Note series has always been the smartphone of most professionals, myself included. I was originally connected and haven't been able to walk since then. With Note devices, you feel like you can do whatever matters. And that's the feeling I got again after holding the Samsung Galaxy Note 20 Ultra 5G in my hand. But worth Rs 1 Lakh+ money, is this phone worth it? Read the review for....
                             </p>
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center space-x-3 pl-4 pb-4">
                                 <a
                                     href="/"
                                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -86,10 +86,10 @@ const Reviews = () => {
                         <div className="flex flex-col justify-center mt-5 sm:mt-0 sm:p-5 sm:col-span-2">
                             <p className="text-lg font-bold">Samsung Galaxy Innovation</p>
 
-                            <p className="mb-4 text-sm tracking-wide text-gray-800">
+                            <p className="mb-4 text-sm px-4 tracking-wide text-gray-800">
                                 Every year at Galaxy Unpacked, Samsung Electronics unveils a new era of mobile innovation – and this year was no exception. Together in person for the first time in three years, Samsung unveiled at its latest Unpacked event in San Francisco its exciting new range of additions to the Galaxy family – including the Galaxy S23 series, the Galaxy Book3 series and...
                             </p>
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center space-x-3 pl-4 pb-4">
                                 <a
                                     href="/"
                                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
@@ -120,10 +120,10 @@ const Reviews = () => {
                         <div className="flex flex-col justify-center mt-5 sm:mt-0 sm:p-5 sm:col-span-2">
                             <p className="text-lg font-bold">Vivo Y series New smartphone Y22 comes to the Market</p>
 
-                            <p className="mb-4 text-sm tracking-wide text-gray-800">
+                            <p className="mb-4 px-4 text-sm tracking-wide text-gray-800">
                                 It could be cricket or football however the match is now on the smartphone. If you have to think about the battery charge while watching the match, then anyone will feel good! The Vivo Y -series smartphone charge has eliminated the all problem with its cool feature and powerful battery. The new smartphone of this series is coming to the country, reads....
                             </p>
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center space-x-3 pl-4 pb-4">
                                 <a
                                     href="/"
                                     className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
