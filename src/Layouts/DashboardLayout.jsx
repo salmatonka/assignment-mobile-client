@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link, Outlet } from 'react-router-dom';
 import useTitle from '../Hooks/useTitle';
 import Footer from '../Shares/Footer/Footer';

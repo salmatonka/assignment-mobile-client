@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BiHeadphone } from 'react-icons/bi';
 import { AiOutlineSync } from 'react-icons/ai';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
