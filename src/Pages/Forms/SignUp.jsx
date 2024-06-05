@@ -1,14 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
+import { AuthContext } from '../../Context/AuthProvider';
 
 const SignUp = () => {
     useTitle('SignUp');
     const navigate = useNavigate();
     const { createUser, googleSignPop, updateUserData } = useContext(AuthContext);
     const [error, setError] = useState('');
+
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -106,11 +107,11 @@ const SignUp = () => {
 
                     {/* password */}
                     <div className="space-y-1 text-sm">
-                        <label for="password" className="block dark:text-gray-400">Password</label>
+                    <label for="password" className="block dark:text-gray-400">Password</label>
                         <input required type="password" name="password" id="password" placeholder="******" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
                         <div className="flex justify-end text-xs dark:text-gray-400">
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
-                        </div>
+                    </div>
                     </div>
 
                     {/* role */}

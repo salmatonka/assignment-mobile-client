@@ -31,8 +31,9 @@ const MyProduct = () => {
                             <th></th>
                             <th>Brand Name</th>
                             <th>Price</th>
+                            <th>Edit</th>
                             <th>Remove</th>
-                            <th>Advertised</th>
+                            
                         </tr>
                     </thead>
                     <tbody>

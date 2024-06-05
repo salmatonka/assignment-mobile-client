@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
+import { MdDelete } from "react-icons/md";
+import { FaRegEdit } from "react-icons/fa";
 const MyProductTable = ({myProduct}) => {
-    const { name,advertising, img, resale_price, _id } = myProduct;
+    const { name,img, resale_price, _id } = myProduct;
 
-
+    const navigate = useNavigate();
   const handleDeleteItem = id =>{
     const getPermission = window.confirm('Are you sure want to delete this product?')
   if(getPermission){
@@ -17,6 +19,8 @@ const MyProductTable = ({myProduct}) => {
       if(data.deletedCount > 0){
         console.log(data);
         toast.success('deleted success')
+        navigate('/')
+                form.reset()
       }
 
     })
@@ -24,19 +28,7 @@ const MyProductTable = ({myProduct}) => {
 
   }
 
-  const handleAdvertising = (id) => {
-        fetch(`https://mobile-market-server.onrender.com/myProduct?id=${id}`, {
-            method: "PUT"
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.modifiedCount > 0){
-                toast.success('Advertised success')
-            }
-            
-        })
-    
-}
+
 
     return (
         <tr className="hover">
@@ -50,17 +42,12 @@ const MyProductTable = ({myProduct}) => {
         <td>{name}</td>
         <td>{resale_price}</td>
         <td>
-          <button onClick={()=> handleDeleteItem(_id)} className="btn bg-purple-300 btn-md">Delete</button>
+        <Link to={`/dashboard/editProduct/${_id}`}> <button  className="btn bg-purple-300 btn-md">Edit <FaRegEdit /></button></Link>
         </td>
         <td>
-          {
-            advertising ?
-            <button disabled className="btn bg-red-300 btn-md">Advertising</button>
-            :
-            <button onClick={()=> handleAdvertising(_id)} className="btn bg-red-300 btn-md">Advertising</button>
-  
-          }
+          <button onClick={()=> handleDeleteItem(_id)} className="btn bg-purple-300 btn-md">Delete</button>
         </td>
+        
       </tr>
     );
 };

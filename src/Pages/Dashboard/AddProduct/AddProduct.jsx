@@ -1,4 +1,4 @@
-import  { useContext } from 'react';
+import { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
@@ -27,8 +27,9 @@ const AddProduct = () => {
         const resale_price = form.resale_price.value;
         const original_price = form.original_price.value;
         const yearUsed = form.yearUsed.value;
-        const description = form.description.value;
+        const details = form.details.value;
         const category = form.category.value;
+        const model = form.model.value;
         const condition = form.condition.value;
 
         // console.log(brandName,
@@ -38,7 +39,7 @@ const AddProduct = () => {
         //     resale_price,
         //     original_price,
         //     category,
-        //     description,
+        //     details ,
         //     condition,
         //     date, yearUsed);
 
@@ -65,9 +66,10 @@ const AddProduct = () => {
                         resale_price,
                         original_price,
                         category,
-                        description,
+                        details,
                         userEmail: user.email,
                         condition,
+                        model,
                         date, yearUsed
                     }
                     console.log(newData)
@@ -152,12 +154,16 @@ const AddProduct = () => {
                                     <input disabled defaultValue={user.email} name='email' type='email' className="input input-bordered w-full" />
                                 </div>
                                 <div className="form-control w-full">
+                                    <label className="label"> <span className="label-text">Model</span></label>
+                                    <input name='model' type='text' className="input input-bordered w-full" required />
+                                </div>
+                                <div className="form-control w-full">
                                     <label className="label"> <span className="label-text">Years of Use</span></label>
                                     <input name='yearUsed' type='text' className="input input-bordered w-full" required />
                                 </div>
                                 <div className="form-control w-full">
-                                    <label className="label"> <span className="label-text">Description</span></label>
-                                    <textarea name='description' type='text' className="input input-bordered w-full h-32" required />
+                                    <label className="label"> <span className="label-text">details </span></label>
+                                    <textarea name='details' type='text' className="input input-bordered w-full h-32" required />
                                 </div>
 
                             </div>

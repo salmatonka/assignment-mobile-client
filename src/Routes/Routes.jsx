@@ -12,10 +12,10 @@ import MyOrder from "../Pages/Dashboard/MyOrder/MyOrder";
 import MyProduct from "../Pages/Dashboard/MyProduct/MyProduct";
 import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 import ReportedProduct from "../Pages/Dashboard/ReportedProduct/ReportedProduct";
-import Advertising from "../Pages/Advertising/Advertising";
-import AllUsedProducts from "../Pages/AllUsedProducts/AllUsedProducts";
-import Blog from "../Pages/ExtraPages/Blog";
 import AboutUs from "../Pages/ExtraPages/AboutUs";
+import AllProducts from "../Pages/Dashboard/AllProducts/AllProducts";
+import EditProduct from "../Pages/Dashboard/EditProduct/EditProduct";
+import UserProfile from "../Pages/UserProfile/UserProfile";
 
 export const routes = createBrowserRouter([
     {
@@ -44,22 +44,15 @@ export const routes = createBrowserRouter([
             path: '/mobile/:id',
             loader: async({params})=> await fetch(`https://mobile-market-server.onrender.com/mobile/${params.id}`),
             element: <DetailsCard />
-        }, 
-        {
-            path: '/advertising',
-            element: <Advertising />
-        },
-        {
-            path: '/product',
-            element: <AllUsedProducts />
-        },
+        },  
         {
             path: '/aboutUs',
             element: <AboutUs />
         },  
+         
         {
-            path: '/blog',
-            element: <Blog />
+            path: '/userProfile',
+            element: <UserProfile/>
         }, 
      ]
     },
@@ -70,28 +63,38 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
+                element: <AllProducts />
+                
+            },
+            {
+                path: '/dashboard/myOrder',
                 element: <MyOrder />
-                // element: <PrivetRoute><MyOrders></MyOrders></PrivetRoute>
+                
             },
             {
                 path: '/dashboard/addProduct',
                 element: <AddProduct />
-                // element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
+                
             },
             {
                 path: '/dashboard/myProduct',
                 element: <MyProduct />
-                // element: <SellerRoute><MyProducts></MyProducts></SellerRoute>
+                
+            },
+            {
+                path: '/dashboard/editProduct/:id',
+                element: <EditProduct />,
+                loader: async({params})=> await fetch(`https://mobile-market-server.onrender.com/mobile/${params.id}`),
             },
             {
                 path: '/dashboard/reportedProduct',
                 element: <ReportedProduct />
-                // element: <AdminRoute><ReportedProducts></ReportedProducts></AdminRoute>
+                
             },
             {
                 path: '/dashboard/allUsers',
                  element: <AllUsers />
-                // element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+                
             }
         ]
     }

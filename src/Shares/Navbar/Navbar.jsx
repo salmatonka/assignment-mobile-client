@@ -36,16 +36,6 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/product"
-                  aria-label="product"
-                  title="product"
-                  className="inline-flex items-center justify-center h-12  font-medium tracking-wide  transition duration-200 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                >
-                  Product
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/blog"
                   aria-label="Blog"
                   title="Blog"
@@ -77,17 +67,6 @@ const Navbar = () => {
                       title="Dashboard"
                     >
                       Dashboard
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/advertising"
-                      className="inline-flex items-center justify-center h-12  font-medium tracking-wide  transition duration-200 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                      aria-label="Advertising"
-                      title="Advertising"
-                    >
-                      Advertising
                     </Link>
                   </li>
 
@@ -179,18 +158,16 @@ const Navbar = () => {
                     Dashboard
                   </Link>
                 </li>
-
                 <li>
                   <Link
-                    to="/advertising"
+                    to="userProfile"
                     className="inline-flex items-center justify-center h-12  font-medium tracking-wide  transition duration-200 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                    aria-label="Advertising"
-                    title="Advertising"
+                    aria-label="userProfile"
+                    title="userProfile"
                   >
-                    Advertising
+                    UserProfile
                   </Link>
                 </li>
-
                 <li>
                   <button
                     onClick={handleLogOut}
